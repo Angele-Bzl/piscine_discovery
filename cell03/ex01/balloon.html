@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta lang="fr">
+            <meta charset="UTF-8">
+            <meta name="keywords" content="HTML">
+            <meta name="description" content="balloon">
+            <meta name="author" content="abarzila">
+            <title>🎈</title>
+    </head>
+    <body>
+        <div id="balloon"></div>
+    </body>
+</html>
+
+<style>
+    html, body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: bisque;
+    }
+    #balloon{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        padding: 1rem;
+        background-color:brown;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+</style>
+
+<script>
+document.getElementById("balloon").addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("balloon").innerHTML = "YOU CLICKED ME!";
+}
+</script>
+
+Grâce à l'accessibilité de l'école 42, j'ai pu transiter d'un milieu professionnel féminin orienté "care" vers la tech, et j'ai pris  confiance en moi. Aujourd'hui je suis fière de contribuer à la représentativité des femmes et de changer le paysage dans le milieu de l'informatique.

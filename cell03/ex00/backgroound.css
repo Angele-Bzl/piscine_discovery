@@ -1,0 +1,27 @@
+html, body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.star{
+    background-image: url(../../../Pictures/front.png);
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+button{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    padding: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: darkmagenta;
+    background-color: lightgoldenrodyellow;
+    border: solid 1px purple;
+}
