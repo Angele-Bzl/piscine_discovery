@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../Pictures/sandwich_sncf/all.png);
+}
+
+h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:indianred;
+    background-color: bisque;
+    padding: 1em;
+    border-radius: 10px;
+    border: solid 3px purple;
+
+}
+
+p{
+    text-align: center;
+    color: bisque;
+    padding: 1em;
+}
+
+.dropdown{
+    display: inline-block;
+}
+
+.dropdown-content{
+ display: none;
+}
+
+.dropdown:hover .dropdown-content{
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+img:active {
+    opacity: 0.5;
+}
+
+h2{
+    position: absolute;
+    bottom: 3em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: bisque;
+    background-color: indianred;
+    padding: 1em;
+    border-radius: 10px;
+    border: solid 3px purple;
+}
