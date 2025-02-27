@@ -3,7 +3,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../../../Pictures/sandwich_sncf/all.png);
+    background-image: url(sandwich_sncf/all.png);
 }
 
 h1{

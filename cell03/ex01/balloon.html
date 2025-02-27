@@ -9,6 +9,7 @@
             <title>🎈</title>
     </head>
     <body>
+        <div class="star"></div>
         <div id="balloon"></div>
     </body>
 </html>
@@ -19,24 +20,98 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        background-color: bisque;
+        background-color: rgb(237, 223, 166);
     }
     #balloon{
         position: absolute;
         top: 40%;
         left: 50%;
         padding: 1rem;
-        background-color:brown;
+        background-color:red;
         width: 200px;
         height: 200px;
         border-radius: 50%;
     }
+    .star{
+    background-image: url(../../../Pictures/balloon.png);
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    }
 </style>
 
 <script>
-document.getElementById("balloon").addEventListener("click", myFunction);
+document.getElementById("balloon").addEventListener("click", grow);
+document.getElementById("balloon").addEventListener("mouseout", shrink);
+let w = 200;
+let h = 200;
+let red = 255;
+let green = 0;
+let blue = 0;
 
-function myFunction() {
-  document.getElementById("balloon").innerHTML = "YOU CLICKED ME!";
+function grow() 
+{
+    w = w + 10;
+    h = h + 10;
+    if (w == 430)
+    {
+        w = 200;
+        h = 200;
+    }
+  document.getElementById("balloon").style.width = `${w}px`;
+  document.getElementById("balloon").style.height = `${h}px`;
+  if (red == 255)
+  {
+      red = 0;
+      green = 255;
+      blue = 0;
+  }
+  else if (green == 255)
+  {
+      red = 0;
+      green = 0;
+      blue = 255;
+  }
+  else if (blue == 255)
+  {
+      red = 255;
+      green = 0;
+      blue = 0;
+  }
+  document.getElementById("balloon").style.backgroundColor = `rgb(${red} ${green} ${blue})`;
+}
+
+function shrink()
+{
+    w = w - 5;
+    h = h - 5;
+    if (w == 195)
+    {
+        w = 200;
+        h = 200;
+    }
+  document.getElementById("balloon").style.width = `${w}px`;
+  document.getElementById("balloon").style.height = `${h}px`;
+  if (red == 255)
+  {
+      red = 0;
+      green = 0;
+      blue = 255;
+  }
+  else if (green == 255)
+  {
+      red = 255;
+      green = 0;
+      blue = 0;
+  }
+  else if (blue == 255)
+  {
+      red = 0;
+      green = 255;
+      blue = 0;
+  }
+  document.getElementById("balloon").style.backgroundColor = `rgb(${red} ${green} ${blue})`;
 }
 </script>

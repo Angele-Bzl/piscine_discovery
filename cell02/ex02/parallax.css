@@ -4,7 +4,7 @@ html, body{
 }
 
 .space{
-    background-image: url(../../../Pictures/space/star.png);
+    background-image: url(space/star.png);
     position:fixed;
     top: 0;
     left: 0;
