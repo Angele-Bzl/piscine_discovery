@@ -6,7 +6,7 @@ html, body{
 }
 
 .star{
-    background-image: url(../../../Pictures/front.png);
+    background-image: url(front.png);
     position:fixed;
     top: 0;
     left: 0;

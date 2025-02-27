@@ -8,5 +8,135 @@
             <title>9000</title>
     </head>
     <body>
+        <div class="back">
+        <div class="calculator">
+                <div class="input-box">
+                    <input class="input" type="text" id="left" name="left">
+                    <select type="select" id="operator" name="operator">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="/">/</option>
+                        <option value="*">*</option>
+                        <option value="%">%</option>
+                    </select>
+                    <input class="input" type="text" id="right" name="right">
+                </div>
+                <div class="button" id="try-me"><button>Try me !</button></div>
+            </div>
+        </div>
     </body>
 </html>
+
+<style>
+    html, body{
+        background-color:antiquewhite;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .calculator{
+        background-color: rgb(230, 110, 174);
+        border: 20px dotted purple;
+        border-radius: 30px;
+        width: 50rem;
+        height: 60rem;
+    }
+    .back{
+    background-image: url(toggle.png);
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .input-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem;
+    }
+    
+    select, button{
+        background-color: pink;
+        border-style: none;
+        border: purple 1px solid;
+        border-radius: 6px;
+        padding: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    input{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 1rem;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<script>
+    let chrono = window.setInterval(please, 30000)
+    function please()
+    {
+        alert("Please, use me...");
+    }
+    document.getElementById("try-me").addEventListener("click", compute);
+    function compute()
+    {
+        let left = Number(document.getElementById("left").value);
+        let right = Number(document.getElementById("right").value);
+        let left_bool = Number.isInteger(left);
+        let right_bool = Number.isInteger(right);
+        let operator = document.getElementById("operator").value;
+        let total = 0;
+        if (left < 0 || right < 0 || left_bool == false || right_bool == false)
+        {
+            alert("Error :(");
+            return;
+        }
+        if (operator == '+')
+        {
+            total = left + right;
+        }
+        if (operator == '-')
+        {
+            total = left - right;
+        }
+        if (operator == '*')
+        {
+            total = left * right;
+        }
+        if (operator == '/')
+        {
+            if (right == 0)
+            {
+                alert("It's over 9000 !");
+                console.log("It's over 9000 !");
+                return;
+            }
+            total = left / right;
+        }
+        if (operator == '%')
+        {
+            if (right == 0)
+            {
+                alert("It's over 9000 !");
+                console.log("It's over 9000 !");
+                return;
+            }
+            total = left % right;
+        }
+        alert(total);
+        console.log(total);
+    }
+</script>
