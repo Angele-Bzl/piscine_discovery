@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta lang="fr">
+            <meta charset="UTF-8">
+            <title>Accueil</title>
+    </head>
+    <body>
+        <header>
+			🌸 Clickez sur nos têtes pour visiter nos sites 🌸
+		</header>
+
+        <main>
+            <a href="aminata.html"><div class="aminata"></div></a>
+            <a href="angele.html"><div class="angele"></div></a>
+            <a href="julia.html"><div class="julia"></div></a>
+        </main>
+        <footer>
+
+        </footer>
+       
+    </body>
+</html>
+
+<style>
+    html, body{
+        margin: 0;
+    }
+	header{
+		position: sticky;
+		top: 0;
+		left: 0;
+		width:100%;
+		background-color: white;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:center;
+		border-bottom: grey solid 1px;
+	}
+    main{
+        position: fixed;
+        top: 2rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color:rgb(193, 169, 241);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        margin: 1rem;
+    }
+
+    .aminata{
+        background-image: url(pictures-index/pic-aminata.png);
+        width: 512px;
+        height: 512px;
+    }
+    .angele{
+        background-image: url(pictures-index/pic-angele.png);
+        width: 512px;
+        height: 512px;
+    }
+    .julia{
+        background-image: url(pictures-index/pic-julia.png);
+        width: 512px;
+        height: 512px;
+    }
+
+    .aminata:hover{
+        background-image: url(pictures-index/aminata-happy.png);
+    }
+    .angele:hover{
+        background-image: url(pictures-index/angele-happy.png);
+    }
+    .julia:hover{
+        background-image: url(pictures-index/julia-happy.png);
+    }
+    @media all and (max-width: 1600px) {
+        main{
+        flex-direction: column;
+    }
+    }
+</style>
