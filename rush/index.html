@@ -35,6 +35,7 @@
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 		display: flex;
+        flex-direction: row;
 		flex-wrap: wrap;
 		justify-content:center;
 		border-bottom: grey solid 1px;
@@ -48,12 +49,13 @@
         margin: 0;
         background-color:rgb(193, 169, 241);
         display: flex;
+        flex-direction: row;
+		flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        overflow: scroll;
     }
-    img{
-        margin: 1rem;
-    }
+
 
     .aminata{
         background-image: url(pictures-index/pic-aminata.png);
@@ -80,9 +82,9 @@
     .julia:hover{
         background-image: url(pictures-index/julia-happy.png);
     }
-    @media all and (max-width: 1600px) {
+    /*@media all and (max-width: 1600px) {
         main{
         flex-direction: column;
     }
-    }
+    }*/
 </style>
